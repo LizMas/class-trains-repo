@@ -1,0 +1,24 @@
+---
+title: "Simple Train"
+author: Liz Masten
+date: 10/22/2019
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyr)
+library(readxl)
+library(tidyverse)
+
+
+trains <- read_csv("train.csv", col_types = cols(
+  obs = col_double(),
+  citizen = col_logical(),
+  age = col_double(),
+  treatment = col_double(),
+  attitude = col_double()
+))
+```
+
